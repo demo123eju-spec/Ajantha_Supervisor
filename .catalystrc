@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "19618000000096188",
+      "name": "Ajantha-Supervisor",
+      "domain": {
+        "id": "50037062052",
+        "name": "ajantha-supervisor-60042993279.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60042993279",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}
