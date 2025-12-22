@@ -4,5 +4,12 @@
       "name": "create-react-app",
       "source": "C:\\Ajantha Supervisor V2\\create-react-app"
     }
-  ]
+  ],
+  "functions": {
+    "targets": [
+      "ajantha_supervisor_function"
+    ],
+    "ignore": [],
+    "source": "functions"
+  }
 }

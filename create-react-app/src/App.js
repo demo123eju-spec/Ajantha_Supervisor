@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  // Sample data - in a real app this would come from an API
-  const stats = {
+  // Reverted to static initial state as per user request to remove API logic
+  const [stats] = useState({
     drivers: 24,
     vehicles: 18,
     activeTrips: 12,
     revenue: 15400
-  };
+  });
+  // API fetch logic moved inside useEffect
+  React.useEffect(() => {
+    fetch('/server/getEmployees') 
+      .then(res => res.json())
+      .then(data => {
+        console.log("Fetched Data:", data.data);
+      })
+      .catch(err => console.error("Fetch Error:", err));
+  }, []);
+
 
   return (
     <div className="App">

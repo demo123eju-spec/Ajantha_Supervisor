@@ -1,0 +1,9 @@
+{
+	"name": "ajantha_supervisor_function",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "zoho@ajanthaem.com",
+	"dependencies": {
+		"zcatalyst-sdk-node": "latest"
+	}
+}
