@@ -14,6 +14,7 @@ function App() {
   React.useEffect(() => {
     // Project ID: 24341000000095323
     // Table (Datastore) ID: 24341000000102109
+console.log("test");
 
     const API_URL = "https://api.catalyst.zoho.com/baas/v1/project/24341000000095323/table/TripData/row";
 
@@ -62,7 +63,7 @@ function App() {
         <div className="stats-grid">
           {/* Drivers Card */}
           <div className="stat-card">
-            <div className="stat-title">Total Drivers</div>
+            <div className="stat-title">Total Drivers11</div>
             <div className="stat-value">{stats.drivers}</div>
             <div className="stat-icon">👨‍✈️</div>
           </div>
