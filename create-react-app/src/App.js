@@ -1,23 +1,52 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 function App() {
+  // Sample data - in a real app this would come from an API
+  const stats = {
+    drivers: 24,
+    vehicles: 18,
+    activeTrips: 12,
+    revenue: 15400
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="dashboard-header">
+        <h1>Admin Dashboard</h1>
       </header>
+      
+      <main className="dashboard-main">
+        <div className="stats-grid">
+          {/* Drivers Card */}
+          <div className="stat-card">
+            <div className="stat-title">Total Drivers</div>
+            <div className="stat-value">{stats.drivers}</div>
+            <div className="stat-icon">👨‍✈️</div>
+          </div>
+
+          {/* Vehicles Card */}
+          <div className="stat-card">
+            <div className="stat-title">Total Vehicles</div>
+            <div className="stat-value">{stats.vehicles}</div>
+            <div className="stat-icon">🚛</div>
+          </div>
+
+          {/* Active Trips Card */}
+          <div className="stat-card">
+            <div className="stat-title">Active Trips</div>
+            <div className="stat-value">{stats.activeTrips}</div>
+            <div className="stat-icon">📍</div>
+          </div>
+
+           {/* Revenue Card */}
+           <div className="stat-card">
+            <div className="stat-title">Total Revenue</div>
+            <div className="stat-value">${stats.revenue.toLocaleString()}</div>
+            <div className="stat-icon">💰</div>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
