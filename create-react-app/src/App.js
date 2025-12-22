@@ -14,9 +14,8 @@ function App() {
   React.useEffect(() => {
     // Project ID: 24341000000095323
     // Table (Datastore) ID: 24341000000102109
-    const PROJECT_ID = "24341000000095323";
-    const TABLE_ID = "24341000000102109";
-    const API_URL = `https://api.catalyst.zoho.com/baas/v1/project/${PROJECT_ID}/table/${TABLE_ID}/row`;
+
+    const API_URL = "https://api.catalyst.zoho.com/baas/v1/project/24341000000095323/table/TripData/row";
 
     const fetchStats = async () => {
       try {
@@ -24,7 +23,9 @@ function App() {
         const response = await fetch(API_URL, {
           method: 'GET',
           headers: {
-            'Authorization': 'Zoho-oauthtoken 1000.01836e0fdd1baae420ad002eb7d4a963.a0ddfb6e88175c334fc7ad7a4c74e4f0'
+            'Authorization': 'Zoho-oauthtoken 1000.01836e0fdd1baae420ad002eb7d4a963.a0ddfb6e88175c334fc7ad7a4c74e4f0',
+            'Accept':'application/json',
+            'Environment':'Development'
           }
         });
 
