@@ -2,8 +2,9 @@
 # ⚠️  Please do not modify this file, as it is fully managed by the CLI.
 
 framework = "create-react-app"
-install_command = "Y"
-build_path = "build"
+install_command = "npm install"
 build_command = "npm run build"
+build_path = "build"
 deployment_name = "default"
 root_path = "./"
+
