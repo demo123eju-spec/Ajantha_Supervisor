@@ -26,9 +26,10 @@
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
+  margin-bottom: 30px;
 }
 
 .stat-card {
@@ -66,4 +67,281 @@
 .stat-icon {
   font-size: 2rem;
   opacity: 0.8;
+}
+
+/* Tabs */
+.tabs-container {
+  margin-top: 20px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #666;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  color: #282c34;
+  border-bottom: 3px solid #282c34;
+  font-weight: bold;
+}
+
+.tab-btn:hover {
+  color: #333;
+}
+
+/* Shift Filter */
+.shift-filter-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.shift-label {
+  font-weight: 600;
+  color: #555;
+  margin-right: 5px;
+}
+
+.shift-btn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #666;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.shift-btn:hover {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+}
+
+.shift-btn.active {
+  background-color: #282c34;
+  color: white;
+  border-color: #282c34;
+}
+
+/* Table */
+.data-table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.data-table th,
+.data-table td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #444;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-active {
+  background-color: #e6f7ff;
+  color: #1890ff;
+}
+
+.status-completed {
+  background-color: #f6ffed;
+  color: #52c41a;
+}
+
+/* --- FLEET MAP STYLES --- */
+.fleet-map-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.fleet-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Excavator Node (Parent) */
+.excavator-node {
+  background-color: #fff;
+  border: 2px solid #282c34;
+  border-radius: 12px;
+  padding: 15px;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  position: relative;
+}
+
+.node-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.node-info {
+  text-align: left;
+}
+
+.node-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.node-sub {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Vertical Connector Line */
+.flow-line-vertical {
+  width: 2px;
+  height: 40px;
+  background-color: #ccc;
+  margin: 0;
+}
+
+/* Tippers Section (Children) */
+.tippers-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 20px;
+  border-top: 2px solid #ccc;
+  /* Horizontal line grouping them */
+  position: relative;
+  margin-top: -2px;
+  /* Connect to vertical line */
+  padding: 10px;
+}
+
+/* Little vertical connectors for children to the horiz line */
+.tippers-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 10px;
+  background-color: #ccc;
+  transform: translateX(-50%);
+}
+
+.tipper-node {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.tipper-node:hover {
+  transform: translateY(-3px);
+  border-color: #1890ff;
+}
+
+.node-icon-small img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.node-info-small {
+  text-align: left;
+}
+
+.node-title-small {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.node-sub-small {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.status-dot.active {
+  background-color: #52c41a;
+  box-shadow: 0 0 4px #52c41a;
+}
+
+.status-dot.completed {
+  background-color: #aaa;
+}
+
+.no-trucks-node {
+  font-size: 0.9rem;
+  color: #999;
+  font-style: italic;
+  padding: 10px;
 }
